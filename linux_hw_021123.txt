@@ -1,0 +1,9 @@
+   0 mkdir -p /opt/test/YULIA_VLADIMIROV/
+   1 tree /opt/
+   2 cd /opt/test/YULIA_VLADIMIROV/
+   3 touch file.txt
+   4 cd
+   5 cp /opt/test/YULIA_VLADIMIROV/file.txt  /tmp/file2.txt
+   6 ls /tmp/fi*
+   7 rm /opt/test/YULIA_VLADIMIROV/file.txt 
+   8 history > /tmp/linux_hw_021123.txt
