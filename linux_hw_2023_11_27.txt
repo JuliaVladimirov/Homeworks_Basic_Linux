@@ -1,0 +1,33 @@
+1 Создайте файл myfirstbashscript.sh где угодно.
+2 Сделайте его исполняемым.
+3 Заведите новую переменную USER и присвойте ей ваше имя в качестве значения
+4 Добавьте в скрипт все необходимое, чтобы он :
+5 Написал дату
+6 Поприветствовал Вас по имени ( hello $USER!)
+7 Написал, из какой директории он работает
+
+
+mkdir -p /root/tmp/
+>> /root/tmp/myfirstbashscript.sh
+ls -l /root/tmp/
+chmod u+x /root/tmp/myfirstbashscript.sh
+ls -l /root/tmp/
+export USER=Yulia
+
+nano /root/tmp/myfirstbashscript.sh
+#!/bin/bash
+date +%D
+echo "hello $USER!"
+pwd
+^O
+^X
+
+cat /root/tmp/myfirstbashscript.sh
+/root/tmp/myfirstbashscript.sh
+
+
+
+
+
+
+
