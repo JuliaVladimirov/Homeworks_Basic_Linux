@@ -1,0 +1,43 @@
+1 Скрипт должен создавать по 10 файлов с порядковым номером и датой создания. 120.04.23 , 220.04.23 , 320.04.23 .. 1020.04.23
+2 Создайте в планировщике новое задание, которое должно будет запускать Ваш скрипт каждые 15 минут.
+
+Что пригодится:
+date +"%d.%m.%y"
+touch
+export EDITOR=nano
+crontab -l
+crontab -e
+Crontab.guru
+
+
+
+cd /opt/171023_morning/yulia_vladimirov
+nano script.sh
+
+Сам скрипт:
+#!/bin/bash
+
+d=$(date +"%d.%m.%y")
+
+ 	for i in {1..10}
+ 	do
+	touch /opt/171023_morning/yulia_vladimirov/$i$d
+	done
+^x
+y
+Enter
+
+
+chmod u+x /opt/171023_morning/yulia_vladimirov/script.sh
+export EDITOR=nano
+crontab -e
+
+Скрипт в планировщике задач:
+*/15 * * * * /opt/171023_morning/yulia_vladimirov/script.sh
+^x
+y
+Enter
+
+
+
+	
